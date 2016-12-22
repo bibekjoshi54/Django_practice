@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from .models import Album
 
 def index(request):
-    all_albums = Album.objects.all()
+    #all_albums = Album.objects.all()
     html = ''
     for album in all_albums:
         url = '/music/' + str(album.id) + '/'
