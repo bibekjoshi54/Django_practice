@@ -6,5 +6,5 @@ urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
     ## Whenever The User requests any music go to
-    url(r'^music', include('music.url'))
+    url(r'^music/', include('music.url'))
 ]
