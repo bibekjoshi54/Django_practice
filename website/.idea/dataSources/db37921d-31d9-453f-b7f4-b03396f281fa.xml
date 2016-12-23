@@ -17,7 +17,7 @@
     <table id="11" parent="2" name="django_migrations"/>
     <table id="12" parent="2" name="django_session"/>
     <table id="13" parent="2" name="music_album"/>
-    <table id="14" parent="2" name="music_songs"/>
+    <table id="14" parent="2" name="music_song"/>
     <table id="15" parent="2" name="sqlite_sequence"/>
     <column id="16" parent="3" name="id">
       <DataType>INTEGER(0,-1)|4</DataType>
@@ -432,7 +432,7 @@ model</ColNames>
       <DataType>VARCHAR(10)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="95" parent="14" name="songs_title">
+    <column id="95" parent="14" name="song_title">
       <Position>2</Position>
       <DataType>VARCHAR(250)(0,-1)|12</DataType>
       <NotNull>1</NotNull>
@@ -442,11 +442,16 @@ model</ColNames>
       <DataType>INTEGER(0,-1)|4</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="97" parent="14">
+    <column id="97" parent="14" name="is_favorite">
+      <Position>4</Position>
+      <DataType>BOOL(0,-1)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="98" parent="14">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="98" parent="14" name="#FAKE_music_songs_1">
+    <foreign-key id="99" parent="14" name="#FAKE_music_song_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>album_id</ColNames>
       <Deferrable>1</Deferrable>
@@ -456,10 +461,10 @@ model</ColNames>
       <OnDelete>no-action</OnDelete>
       <OnUpdate>no-action</OnUpdate>
     </foreign-key>
-    <column id="99" parent="15" name="name">
+    <column id="100" parent="15" name="name">
       <DataType>(0,-1)|12</DataType>
     </column>
-    <column id="100" parent="15" name="seq">
+    <column id="101" parent="15" name="seq">
       <Position>1</Position>
       <DataType>(0,-1)|12</DataType>
     </column>
